@@ -10,14 +10,38 @@ const Home = () => {
       const response = await basicHttpService.getRequest(
         "http://localhost:8000/users/"
       );
-      setData(response.data);
+      setData(response?.data);
     };
     getData();
     return () => {};
   }, []);
   return (
-    <div className="homeComponentContainer">
-      {data ? "connected, but no data yet" : data}
+    <div className="home-container">
+      <ul>
+        {data
+          ? data.map(
+              ({
+                id,
+                username,
+                email,
+                full_name,
+                is_active,
+                is_superuser,
+                created_at,
+                updated_at,
+              }) => {
+                return (
+                  <li key={id}>
+                    Username: {username}, Email: {email}, Full Name: {full_name}
+                    , Is Active: {is_active.toString()}, Is Superuser:{" "}
+                    {is_superuser.toString()}, Created At: {created_at}, Updated
+                    At: {updated_at}
+                  </li>
+                );
+              }
+            )
+          : "Loading..."}
+      </ul>
     </div>
   );
 };
