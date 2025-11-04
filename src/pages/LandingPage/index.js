@@ -11,12 +11,13 @@ const LandingPage = () => {
         display: "flex",
         justifyContent: "space-evenly",
         alignItems: "center",
+        padding: "200px",
       }}
     >
       <Image
         src={`${process.env.PUBLIC_URL}/img/peach.png`}
         alt="Logo"
-        style={{ padding: "120px", height: "auto", width: "40%" }}
+        style={{ padding: "120px", height: "auto", width: "50%" }}
       />
       <Login />
     </Grid>

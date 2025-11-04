@@ -1,6 +1,7 @@
 import React from "react";
 import InputField from "../../common/InputField";
 import { Form, FormField, Header, Button, Grid } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -38,7 +39,6 @@ const SignUp = () => {
         </Grid.Row>
       </Grid>
       <Button
-        disabled
         style={{
           width: "100%",
           background: "none",
@@ -46,7 +46,9 @@ const SignUp = () => {
           marginTop: "20px",
         }}
       >
-        Sign up
+        <NavLink to="/signup" style={{ color: "black" }}>
+          Sign up
+        </NavLink>
       </Button>
       <Header as="h5" style={{ marginTop: "20px" }}>
         Coming soon...

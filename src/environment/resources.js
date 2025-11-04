@@ -8,6 +8,7 @@ export const resources = {
   },
   paths: {
     basePath: "/",
+    signup: "/signup",
   },
 };
 
