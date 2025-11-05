@@ -28,11 +28,7 @@ const SignUp = () => {
           alignItems: "flex-start",
         }}
       >
-        <Grid.Column
-          style={{
-            width: "400px",
-          }}
-        >
+        <Grid.Column style={{ paddingLeft: "100px" }}>
           <Header as="h2" textAlign="left">
             Sign Up
           </Header>
@@ -45,7 +41,7 @@ const SignUp = () => {
             style={{ height: "auto", width: "60%" }}
           />
         </Grid.Column>
-        <Grid.Column style={{ width: "400px" }}>
+        <Grid.Column style={{ padding: "0px 100px" }}>
           <Form className="sign-up-container">
             <FormField>
               <label>First Name</label>
